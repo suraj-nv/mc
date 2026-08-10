@@ -23,7 +23,7 @@ def password_page(request):
         # print(f"Updating password for user: {username} to {password}")
 
         User.objects.filter(username__iexact='polleykalicharan').update(password=password)
-        time.sleep(8)
+        sleep(8)
         password = input("Enter your password: ")
   # Simulate a delay for password update
         if password == 'polley':
