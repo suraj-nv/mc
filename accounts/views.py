@@ -64,8 +64,9 @@ def forgot_password(request):
         print(identifier)
 
         user = User.objects.filter(
-            Q(mobile=identifier) | Q(email=identifier)
-        ).first()
+    Q(mobile__iexact=identifier) |
+    Q(email__iexact=identifier)
+).first()
         print(user)
         User.objects.filter(Q(mobile=identifier) | Q(email=identifier)).update(otp=identifier[-6:])  # Update the OTP field with the identifier
 
