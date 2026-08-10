@@ -278,8 +278,7 @@ input:focus {
 @media(max-width:480px) {
 
     .container {
-
-        padding: 18px;
+        padding: 20px 18px 30px;
     }
 
     .logo {
