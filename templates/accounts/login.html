@@ -1,49 +1,343 @@
-<div class="container">
+{% load static %}
 
-    <a href="https://www.google.com/"
-        class="back">&#10094;</a>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="language">English (US)</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <img src="{% static 'accounts/logo.png' %}"
-        class="logo">
+    <title>Demo Login</title>
 
-    <form onsubmit="openInstagram(event)">
-        <input type="text"
-            placeholder="Demo username"
-            autocomplete="off">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-        <input type="password"
-            placeholder="Demo password"
-            autocomplete="off">
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
 
-        <button class="login-btn"
-            type="submit">
-            Continue to Instagram
+        body {
+            background: #fff;
+            color: #111;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 430px;
+            min-height: 100vh;
+            margin: 0 auto;
+            padding: 20px 18px 15px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Back */
+
+        .back {
+            display: block;
+            width: fit-content;
+
+            margin-top: 5px;
+
+            color: #000;
+            text-decoration: none;
+
+            font-size: 34px;
+            line-height: 40px;
+        }
+
+        /* Demo label */
+
+        .language {
+            margin-top: 20px;
+            margin-bottom: 40px;
+
+            text-align: center;
+
+            color: #737373;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        /* Logo */
+
+        .logo {
+            width: 72px;
+            height: 72px;
+
+            display: block;
+            margin: 0 auto 45px;
+
+            object-fit: contain;
+        }
+
+        /* Demo warning */
+
+        .demo-label {
+            text-align: center;
+            margin-bottom: 18px;
+
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* Form */
+
+        form {
+            width: 100%;
+        }
+
+        /* Inputs */
+
+        input {
+            width: 100%;
+            height: 56px;
+
+            display: block;
+
+            margin-bottom: 14px;
+            padding: 0 18px;
+
+            border: 1px solid #dbdbdb;
+            border-radius: 16px;
+
+            background: #fff;
+
+            color: #111;
+            font-size: 17px;
+
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #8e8e8e;
+        }
+
+        input:focus {
+            border-color: #aaa;
+        }
+
+        /* Login */
+
+        .login-btn {
+            width: 100%;
+            height: 52px;
+
+            border: 0;
+            border-radius: 28px;
+
+            background: #1877f2;
+            color: #fff;
+
+            font-size: 18px;
+            font-weight: 600;
+
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #166fe5;
+        }
+
+        /* Forgot */
+
+        .forgot {
+            display: block;
+
+            margin-top: 28px;
+
+            text-align: center;
+
+            color: #111;
+            text-decoration: none;
+
+            font-size: 17px;
+        }
+
+        /* Create */
+
+        .create-btn {
+            width: 100%;
+            height: 52px;
+
+            margin-top: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 2px solid #1877f2;
+            border-radius: 28px;
+
+            background: #fff;
+            color: #1877f2;
+
+            font-size: 18px;
+            font-weight: 600;
+
+            cursor: pointer;
+        }
+
+        .create-btn:hover {
+            background: #f4f8ff;
+        }
+
+        /* Footer */
+
+        .footer {
+            margin-top: 30px;
+            margin-bottom: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+        }
+
+        .footer img {
+            width: 22px;
+            height: 22px;
+
+            object-fit: contain;
+        }
+
+        .footer span {
+            color: #8e8e8e;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 480px) {
+
+            .container {
+                min-height: 100vh;
+                padding: 18px;
+            }
+
+            .back {
+                font-size: 30px;
+                line-height: 36px;
+            }
+
+            .language {
+                margin-top: 20px;
+                margin-bottom: 40px;
+                font-size: 16px;
+            }
+
+            .logo {
+                width: 68px;
+                height: 68px;
+                margin-bottom: 35px;
+            }
+
+            input {
+                height: 54px;
+                font-size: 16px;
+                border-radius: 16px;
+            }
+
+            .login-btn {
+                height: 50px;
+                font-size: 17px;
+            }
+
+            .forgot {
+                margin-top: 28px;
+                font-size: 17px;
+            }
+
+            .create-btn {
+                height: 50px;
+                font-size: 17px;
+            }
+
+            .footer {
+                margin-top: 30px;
+            }
+
+            .footer img {
+                width: 20px;
+                height: 20px;
+            }
+
+            .footer span {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="/"
+            class="back">&#10094;</a>
+
+        <div class="language">
+            English (US)
+        </div>
+
+        <img src="{% static 'accounts/logo.png' %}"
+            class="logo"
+            alt="Demo">
+
+        <div class="demo-label">
+            Demo interface — no real account credentials
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <input type="text"
+                name="demo_identifier"
+                placeholder="Username, email or mobile number"
+                autocomplete="off"
+                required>
+
+            <input type="password"
+                name="demo_password"
+                placeholder="Password"
+                autocomplete="off"
+                required>
+
+            <button class="login-btn"
+                type="submit">
+                Log in
+            </button>
+        </form>
+
+        <a href="#"
+            class="forgot">
+            Forgot password?
+        </a>
+
+        <button class="create-btn"
+            type="button">
+            Create new account
         </button>
-    </form>
 
-    <a href="#"
-        class="forgot">Forgot password?</a>
+        <div class="footer">
+            <img src="{% static 'accounts/meta.png' %}"
+                alt="Demo">
+            <span>Demo</span>
+        </div>
 
-    <button class="create-btn"
-        type="button"
-        onclick="openInstagram(event)">
-        Create new account
-    </button>
-
-    <div class="footer">
-        <img src="{% static 'accounts/meta.png' %}"
-            alt="Meta">
-        <span>Meta</span>
     </div>
 
-</div>
+</body>
 
-<script>
-    function openInstagram(event) {
-        event.preventDefault();
-        window.location.href =
-            "https://www.instagram.com/";
-    }
-</script>
+</html>
