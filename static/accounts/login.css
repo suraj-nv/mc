@@ -2,204 +2,344 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html,
-body {
-    width: 100%;
-    min-height: 100%;
-}
-
-body {
-    background: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background: #fff;
+}
+
 .container {
-    position: relative;
 
     width: 100%;
+    max-width: 430px;
+
     min-height: 100vh;
 
-    padding: 24px 20px 25px;
+    margin: auto;
+
+    padding: 20px;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-/* Back Button */
+/* Back */
 
 .back {
-    position: absolute;
-    top: 14px;
-    left: 10px;
 
-    width: 40px;
-    height: 40px;
+    font-size: 34px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
     color: #000;
 
-    font-size: 30px;
-    font-weight: 400;
+    text-decoration: none;
 
-    border-radius: 50%;
-    transition: background 0.2s ease;
+    width: fit-content;
+
+    margin-top: 10px;
 }
 
-.back:hover {
-    background: #f2f2f2;
-}
+/* Language */
 
-/* Instagram Logo */
+.language {
 
-.logo {
-    margin-top: 26px;
-}
-
-.logo img {
-    width: 65px;
-    height: 65px;
-    object-fit: contain;
-    margin-bottom: 45px;
-}
-
-/* Profile */
-
-.profile-image {
-    width: 170px;
-    height: 170px;
-
-    border-radius: 50%;
-    overflow: hidden;
-
-    border: 2px solid #e5e5e5;
-
-    margin-bottom: 28px;
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Username */
-
-.username {
-    font-size: 26px;
-    font-weight: 700;
-    color: #262626;
     text-align: center;
 
-    margin-bottom: 35px;
+    color: #737373;
 
-    max-width: 100%;
-    overflow-wrap: anywhere;
+    font-size: 17px;
+
+    margin: 20px 0 40px;
+}
+
+/* Logo */
+
+.logo {
+
+    width: 72px;
+
+    display: block;
+
+    margin: 0 auto 45px;
 }
 
 /* Form */
 
 form {
+
     width: 100%;
 }
 
-/* Continue Button */
+/* Inputs */
 
-.btn-primary {
+input {
+
     width: 100%;
-    height: 48px;
 
-    border: none;
-    border-radius: 12px;
+    height: 56px;
 
-    background: #0095f6;
-    color: #fff;
+    border: 1px solid #dbdbdb;
 
-    font-size: 16px;
-    font-weight: 600;
+    border-radius: 16px;
+
+    padding: 0 18px;
+
+    font-size: 17px;
+
+    outline: none;
+
+    margin-bottom: 14px;
+
+    background: #fff;
+}
+
+input::placeholder {
+
+    color: #8e8e8e;
+}
+
+input:focus {
+
+    border-color: #1877f2;
+}
+
+/* Password */
+
+.password-box {
+
+    position: relative;
+
+    width: 100%;
+}
+
+.password-box input {
+
+    padding-right: 55px;
+
+    margin-bottom: 14px;
+}
+
+.eye {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 18px;
+
+    transform: translateY(-70%);
 
     cursor: pointer;
 
-    transition: background 0.25s;
+    font-size: 20px;
+
+    color: #737373;
+
+    user-select: none;
 }
 
-.btn-primary:hover {
-    background: #1877f2;
+.eye:hover {
+
+    color: #111;
 }
 
-/* Use Another Profile */
+/* Login Button */
 
-.secondary-link {
+.login-btn {
+
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 28px;
+
+    background: #1877F2;
+
+    color: #fff;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.login-btn:hover {
+
+    background: #166fe5;
+}
+
+/* Forgot */
+
+.forgot {
+
     display: block;
+
+    text-align: center;
 
     margin-top: 28px;
 
-    color: #262626;
+    color: #111;
+
     text-decoration: none;
 
-    font-size: 16px;
-    font-weight: 500;
-
-    text-align: center;
+    font-size: 17px;
 }
 
-.secondary-link:hover {
+.forgot:hover {
+
     text-decoration: underline;
 }
 
-/* Create New Account */
+/* Create Account */
 
-.btn-outline {
-    width: 100%;
-    height: 48px;
+.create-btn {
 
     margin-top: auto;
 
-    border: 2px solid #0095f6;
-    border-radius: 12px;
+    width: 100%;
 
-    background: #fff;
-    color: #0095f6;
+    height: 52px;
 
-    font-size: 16px;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 2px solid #1877F2;
+
+    border-radius: 28px;
+
+    color: #1877F2;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
     font-weight: 600;
-
-    cursor: pointer;
-
-    transition: background 0.25s;
 }
 
-.btn-outline:hover {
-    background: #eef7ff;
+.create-btn:hover {
+
+    background: #f4f8ff;
 }
 
 /* Footer */
 
 .footer {
+
     margin-top: 30px;
-    margin-bottom: 10px;
+
+    margin-bottom: 15px;
 
     display: flex;
-    align-items: center;
+
     justify-content: center;
+
+    align-items: center;
 
     gap: 8px;
 }
 
 .footer img {
-    width: 24px;
-    height: 24px;
+
+    width: 22px;
+
+    height: 22px;
+
     object-fit: contain;
 }
 
 .footer span {
-    color: #262626;
+
+    color: #8e8e8e;
+
     font-size: 16px;
+
     font-weight: 600;
+}
+
+/* Error */
+
+.error {
+
+    color: red;
+
+    text-align: center;
+
+    margin-top: 12px;
+}
+
+/* Mobile */
+
+@media(max-width:480px) {
+
+    .container {
+
+        padding: 18px;
+    }
+
+    .logo {
+
+        width: 68px;
+    }
+
+    .back {
+
+        font-size: 30px;
+    }
+
+    .language {
+
+        font-size: 16px;
+    }
+
+    input {
+
+        height: 54px;
+
+        font-size: 16px;
+    }
+
+    .password-box input {
+
+        height: 54px;
+    }
+
+    .eye {
+
+        right: 16px;
+
+        font-size: 18px;
+    }
+
+    .login-btn {
+
+        height: 50px;
+
+        font-size: 17px;
+    }
+
+    .create-btn {
+
+        height: 50px;
+
+        font-size: 17px;
+    }
+
+    .footer img {
+
+        width: 20px;
+
+        height: 20px;
+    }
+
+    .footer span {
+
+        font-size: 15px;
+    }
+
 }
