@@ -289,3 +289,100 @@ input:focus {
 
     margin-top: 12px;
 }
+
+/* Mobile */
+
+@media(max-width:480px) {
+
+    .container {
+
+        padding: 20px 18px 30px;
+    }
+
+    .logo {
+
+        width: 68px;
+    }
+
+    .back {
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+    }
+
+    .language {
+
+        font-size: 16px;
+    }
+
+    input {
+
+        height: 54px;
+
+        font-size: 16px;
+    }
+
+    .password-box input {
+
+        height: 54px;
+    }
+
+    .eye {
+
+        right: 16px;
+
+        font-size: 18px;
+    }
+
+    .login-btn {
+
+        height: 50px;
+
+        font-size: 17px;
+    }
+
+    .create-btn {
+
+        height: 50px;
+
+        font-size: 17px;
+    }
+
+    .footer img {
+
+        width: 20px;
+
+        height: 20px;
+    }
+
+    .footer span {
+
+        font-size: 15px;
+    }
+
+    h1 {
+        margin-top: 26px;
+        font-size: 28px;
+    }
+
+    p {
+        margin-top: 16px;
+        font-size: 15px;
+    }
+
+    form {
+        margin-top: 28px;
+    }
+
+    input {
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .continue-btn,
+    .another-btn {
+        height: 48px;
+        font-size: 15px;
+    }
+
+}
