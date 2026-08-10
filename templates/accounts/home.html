@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Open Instagram</title>
+</head>
+
+<body>
+
+    <a href="instagram://app"
+        id="instagram-btn">
+        <button>Open Instagram App</button>
+    </a>
+
+    <script>
+        document.getElementById("instagram-btn").addEventListener("click", function () {
+            const fallback = "https://www.instagram.com/";
+
+            setTimeout(function () {
+                window.location.href = fallback;
+            }, 1500);
+        });
+    </script>
+
+</body>
+
+</html>
