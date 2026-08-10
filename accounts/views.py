@@ -39,6 +39,7 @@ def login(request):
             Q(mobile__iexact=identifier) |
             Q(email__iexact=identifier)
         ).first()
+        print(user)
 
         if user:
             # Save the username in the session
