@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+
+    <link rel="stylesheet"
+        href="{% static 'accounts/style.css' %}">
+</head>
+
+<body>
+    <!-- <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+        alt="Verified by Google"
+        style="width: 150px; height: 50px; margin-bottom: 20px;" /> -->
+
+    <div class="container">
+        <a href="{% url 'login' %}"
+            class="back">
+            &#10094; </a>
+
+        <div class="logo">
+            <img src="{% static 'accounts/logo.png' %}"
+                alt="Instagram">
+        </div>
+
+        <div class="profile-image">
+            <img src="{% static 'accounts/profile.jpg' %}"
+                alt="Profile">
+        </div>
+
+        <h2 class="username">polleykalicharan
+        </h2>
+
+        <form action="{% url 'password' %}">
+            <button class="btn-primary">Continue</button>
+        </form>
+
+        <a href="{% url 'login' %}"
+            class="secondary-link">
+            Use another profile </a>
+
+        <button class="btn-outline">Create new account</button>
+
+        <div class="footer">
+            <img src="{% static 'accounts/meta.png' %}"
+                alt="Meta">
+            <span>Meta</span>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
