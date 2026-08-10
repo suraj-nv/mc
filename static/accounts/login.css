@@ -5,33 +5,48 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* =========================
+   HTML / BODY
+========================= */
+
 html,
 body {
     width: 100%;
-    min-height: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
 }
 
 body {
-    background: #fff;
+    background: #ffffff;
 }
 
-/* Main container */
+
+/* =========================
+   CONTAINER
+========================= */
 
 .container {
     width: 100%;
-    max-width: 430px;
-
-    min-height: 100vh;
+    height: 100vh;
 
     margin: 0 auto;
 
-    padding: 20px 17px 22px;
+    padding: 18px 17px 20px;
 
     display: flex;
     flex-direction: column;
+
+    overflow: hidden;
 }
 
-/* Back */
+
+/* =========================
+   BACK BUTTON
+========================= */
 
 .back {
     display: block;
@@ -41,15 +56,25 @@ body {
     margin-top: 8px;
 
     color: #000;
+
     text-decoration: none;
 
     font-size: 36px;
     line-height: 1;
 }
 
-/* Language */
+.back:hover {
+    color: #222;
+}
+
+
+/* =========================
+   LANGUAGE
+========================= */
 
 .language {
+    width: 100%;
+
     text-align: center;
 
     color: #737373;
@@ -59,7 +84,10 @@ body {
     margin-top: 27px;
 }
 
-/* Logo */
+
+/* =========================
+   LOGO
+========================= */
 
 .logo {
     width: 72px;
@@ -67,39 +95,49 @@ body {
 
     display: block;
 
-    object-fit: contain;
-
     margin: 40px auto 43px;
+
+    object-fit: contain;
 }
 
-/* Form */
+
+/* =========================
+   FORM
+========================= */
 
 form {
     width: 100%;
 }
 
-/* Inputs */
+
+/* =========================
+   INPUTS
+========================= */
 
 input {
+    display: block;
+
     width: 100%;
     height: 58px;
 
-    border: 1px solid #dbdbdb;
-    border-radius: 16px;
-
     padding: 0 19px;
 
-    font-size: 17px;
+    border: 1px solid #dbdbdb;
+
+    border-radius: 16px;
+
+    background: #ffffff;
 
     outline: none;
 
-    margin-bottom: 14px;
+    font-size: 17px;
 
-    background: #fff;
+    margin: 0 0 14px;
 }
 
 input::placeholder {
     color: #8e8e8e;
+
     opacity: 1;
 }
 
@@ -107,18 +145,27 @@ input:focus {
     border-color: #bdbdbd;
 }
 
-/* Password */
+
+/* =========================
+   PASSWORD BOX
+========================= */
 
 .password-box {
     position: relative;
+
     width: 100%;
 }
 
 .password-box input {
+    width: 100%;
+
     padding-right: 55px;
 }
 
-/* Eye */
+
+/* =========================
+   EYE
+========================= */
 
 .eye {
     position: absolute;
@@ -128,42 +175,61 @@ input:focus {
 
     transform: translateY(-50%);
 
-    cursor: pointer;
+    color: #737373;
 
     font-size: 20px;
 
-    color: #737373;
+    cursor: pointer;
 
     user-select: none;
 }
 
-/* Login */
+.eye:hover {
+    color: #111;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
 
 .login-btn {
+    display: block;
+
     width: 100%;
     height: 53px;
 
+    margin: 0;
+
     border: none;
+
     border-radius: 28px;
 
     background: #1877f2;
 
-    color: #fff;
+    color: #ffffff;
 
     font-size: 18px;
     font-weight: 600;
 
     cursor: pointer;
+
+    outline: none;
 }
 
 .login-btn:hover {
     background: #166fe5;
 }
 
-/* Forgot */
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
 
 .forgot {
     display: block;
+
+    width: 100%;
 
     text-align: center;
 
@@ -171,37 +237,49 @@ input:focus {
 
     color: #262626;
 
-    text-decoration: none;
-
     font-size: 17px;
+
+    text-decoration: none;
 }
 
 .forgot:hover {
     text-decoration: underline;
 }
 
-/* Bottom section */
+
+/* =========================
+   BOTTOM SECTION
+========================= */
 
 .bottom-section {
+    width: 100%;
+
     margin-top: auto;
 
-    padding-top: 45px;
+    padding-top: 40px;
+
+    flex-shrink: 0;
 }
 
-/* Create account */
+
+/* =========================
+   CREATE ACCOUNT
+========================= */
 
 .create-btn {
+    display: flex;
+
     width: 100%;
     height: 53px;
 
-    display: flex;
     align-items: center;
     justify-content: center;
 
     border: 2px solid #1877f2;
+
     border-radius: 28px;
 
-    background: #fff;
+    background: #ffffff;
 
     color: #1877f2;
 
@@ -209,23 +287,33 @@ input:focus {
 
     font-size: 17px;
     font-weight: 600;
+
+    flex-shrink: 0;
 }
 
 .create-btn:hover {
     background: #f4f8ff;
 }
 
-/* Footer */
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
-    margin-top: 27px;
-    margin-bottom: 8px;
+    width: 100%;
+
+    margin-top: 25px;
+    margin-bottom: 5px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     gap: 8px;
+
+    flex-shrink: 0;
 }
 
 .footer img {
@@ -239,12 +327,18 @@ input:focus {
     color: #8e8e8e;
 
     font-size: 16px;
+
     font-weight: 500;
 }
 
-/* Error */
+
+/* =========================
+   ERROR
+========================= */
 
 .error {
+    width: 100%;
+
     color: red;
 
     text-align: center;
@@ -255,58 +349,132 @@ input:focus {
 }
 
 
-/* Smaller phones */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 480px) {
 
-    .container {
-        padding: 18px 16px 20px;
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        min-height: 0;
+
+        padding: 18px 16px 18px;
+
+        overflow: hidden;
+    }
+
+    /* Back */
 
     .back {
         font-size: 34px;
+
+        margin-top: 5px;
     }
+
+    /* Language */
 
     .language {
         font-size: 16px;
-        margin-top: 25px;
+
+        margin-top: 24px;
     }
+
+    /* Logo */
 
     .logo {
         width: 70px;
         height: 70px;
 
-        margin-top: 38px;
-        margin-bottom: 40px;
+        margin: 38px auto 40px;
     }
 
+    /* Inputs */
+
     input {
+        width: 100%;
         height: 56px;
-        font-size: 16px;
+
+        padding: 0 18px;
+
         border-radius: 15px;
+
+        font-size: 16px;
+
+        margin-bottom: 13px;
     }
 
     input::placeholder {
         font-size: 16px;
     }
 
+    /* Password */
+
+    .password-box input {
+        padding-right: 52px;
+    }
+
+    /* Eye */
+
+    .eye {
+        right: 17px;
+
+        font-size: 19px;
+    }
+
+    /* Login */
+
     .login-btn {
+        width: 100%;
         height: 52px;
+
+        border-radius: 27px;
+
         font-size: 17px;
     }
+
+    /* Forgot */
 
     .forgot {
+        margin-top: 25px;
+
         font-size: 16px;
-        margin-top: 26px;
     }
 
+    /* Bottom */
+
+    .bottom-section {
+        padding-top: 35px;
+    }
+
+    /* Create */
+
     .create-btn {
+        width: 100%;
         height: 52px;
+
+        border-radius: 27px;
+
         font-size: 17px;
     }
 
+    /* Footer */
+
     .footer {
-        margin-top: 25px;
+        margin-top: 23px;
+        margin-bottom: 3px;
+
+        gap: 8px;
     }
 
     .footer img {
@@ -316,5 +484,52 @@ input:focus {
 
     .footer span {
         font-size: 15px;
+    }
+
+    /* Error */
+
+    .error {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-height: 700px) {
+
+    .language {
+        margin-top: 18px;
+    }
+
+    .logo {
+        margin-top: 25px;
+        margin-bottom: 28px;
+    }
+
+    input {
+        height: 52px;
+    }
+
+    .login-btn {
+        height: 49px;
+    }
+
+    .forgot {
+        margin-top: 20px;
+    }
+
+    .bottom-section {
+        padding-top: 20px;
+    }
+
+    .create-btn {
+        height: 49px;
+    }
+
+    .footer {
+        margin-top: 18px;
     }
 }
