@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet"
+        href="{% static 'accounts/verify.css' %}">
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="{% url 'forgot_password' %}"
+            class="back">
+            &#10094;
+        </a>
+
+        <h1>{{ title }}</h1>
+
+        <p>
+            We sent a code to <strong>{{ identifier }}</strong>.
+            Enter that code to confirm your account. </p>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <input type="text"
+                name="code"
+                placeholder="Enter code"
+                required>
+
+            {% if error %}
+            <p style="color:red;">{{ error }}</p>
+            {% endif %}
+
+            <button type="submit"
+                class="continue-btn">
+                Continue
+            </button>
+        </form>
+    </div>
+
+</body>
+
+</html>
