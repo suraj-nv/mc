@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -12,55 +11,102 @@ body {
 }
 
 body {
-    background: #fff;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
+    position: relative;
+
     width: 100%;
     min-height: 100vh;
-    padding: 16px 17px 20px;
+
+    padding: 22px 20px 25px;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-/* Back */
+/* Back Button */
 
 .back {
-    width: fit-content;
+    position: absolute;
 
-    margin-top: 6px;
+    top: 14px;
+    left: 10px;
 
-    color: #111;
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     text-decoration: none;
+    color: #000;
 
-    font-size: 36px;
-    line-height: 1;
+    font-size: 34px;
+    font-weight: 400;
+
+    border-radius: 50%;
 }
 
-/* Language */
-
-.language {
-    margin-top: 26px;
-
-    text-align: center;
-
-    color: #737373;
-
-    font-size: 16px;
+.back:hover {
+    background: #f2f2f2;
 }
 
-/* App logo */
+/* Logo */
 
 .logo {
-    display: block;
+    margin-top: 30px;
+}
 
-    width: 70px;
-    height: 70px;
+.logo img {
+    width: 72px;
+    height: 72px;
 
     object-fit: contain;
 
-    margin: 40px auto 44px;
+    margin-bottom: 42px;
+}
+
+/* Profile */
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 2px solid #e5e5e5;
+
+    margin-bottom: 24px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* Username */
+
+.username {
+    max-width: 100%;
+
+    margin-bottom: 30px;
+
+    color: #262626;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    text-align: center;
+
+    overflow-wrap: anywhere;
 }
 
 /* Form */
@@ -69,138 +115,97 @@ form {
     width: 100%;
 }
 
-/* Fields */
+/* Continue Button */
 
-input {
+.btn-primary {
     width: 100%;
-    height: 54px;
+    height: 52px;
 
-    padding: 0 18px;
+    border: none;
+    border-radius: 13px;
 
-    border: 1px solid #dbdbdb;
-    border-radius: 14px;
+    background: #0095f6;
+    color: #fff;
 
-    background: #fff;
-
-    outline: none;
-
-    font-size: 16px;
-
-    margin-bottom: 13px;
-}
-
-input::placeholder {
-    color: #8e8e8e;
-}
-
-input:focus {
-    border-color: #aaa;
-}
-
-/* Password */
-
-.password-box {
-    position: relative;
-}
-
-.password-box input {
-    padding-right: 52px;
-}
-
-.eye {
-    position: absolute;
-
-    right: 18px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    color: #737373;
-    font-size: 20px;
+    font-size: 17px;
+    font-weight: 600;
 
     cursor: pointer;
 }
 
-/* Primary button */
-
-.login-btn {
-    width: 100%;
-    height: 52px;
-
-    margin-top: 1px;
-
-    border: 0;
-    border-radius: 26px;
-
+.btn-primary:hover {
     background: #1877f2;
-    color: white;
-
-    font-size: 17px;
-    font-weight: 600;
 }
 
-/* Forgot */
+/* Use Another Profile */
 
-.forgot {
+.secondary-link {
     display: block;
 
-    margin-top: 26px;
-
-    text-align: center;
+    margin-top: 25px;
 
     color: #262626;
 
-    font-size: 16px;
-    text-decoration: none;
-}
-
-/* Bottom */
-
-.bottom-section {
-    margin-top: auto;
-    padding-top: 45px;
-}
-
-/* Secondary button */
-
-.create-btn {
-    width: 100%;
-    height: 52px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1.5px solid #1877f2;
-    border-radius: 26px;
-
-    color: #1877f2;
-    background: white;
-
     text-decoration: none;
 
     font-size: 17px;
+    font-weight: 500;
+
+    text-align: center;
+}
+
+.secondary-link:hover {
+    text-decoration: underline;
+}
+
+/* Create New Account */
+
+.btn-outline {
+    width: 100%;
+    height: 52px;
+
+    margin-top: auto;
+
+    border: 2px solid #0095f6;
+    border-radius: 13px;
+
+    background: #fff;
+    color: #0095f6;
+
+    font-size: 17px;
     font-weight: 600;
+
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background: #eef7ff;
 }
 
 /* Footer */
 
 .footer {
     margin-top: 25px;
+    margin-bottom: 8px;
 
     display: flex;
-    justify-content: center;
+
     align-items: center;
+    justify-content: center;
 
     gap: 8px;
 }
 
 .footer img {
-    width: 21px;
-    height: 21px;
+    width: 23px;
+    height: 23px;
+
+    object-fit: contain;
 }
 
 .footer span {
-    color: #8e8e8e;
-    font-size: 15px;
+    color: #262626;
+
+    font-size: 16px;
+    font-weight: 600;
 }
