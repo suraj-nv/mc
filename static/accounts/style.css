@@ -1,0 +1,254 @@
+```css * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+    padding: 30px 24px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Back Button */
+
+.back {
+    position: absolute;
+    top: 18px;
+    left: 12px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #000;
+
+    font-size: 34px;
+    font-weight: 400;
+
+    border-radius: 50%;
+    transition: background .2s ease;
+}
+
+.back:hover {
+    background: #f2f2f2;
+}
+
+/* Instagram Logo */
+
+.logo {
+    margin-top: 30px;
+}
+
+.logo img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin-bottom: 55px;
+}
+
+/* Profile */
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 2px solid #e5e5e5;
+    margin-bottom: 28px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Username */
+
+.username {
+    font-size: 30px;
+    font-weight: 700;
+    color: #262626;
+    text-align: center;
+
+    margin-bottom: 42px;
+}
+
+/* Form */
+
+form {
+    width: 100%;
+}
+
+/* Continue Button */
+
+.btn-primary {
+    width: 100%;
+    height: 52px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #0095f6;
+    color: #fff;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn-primary:hover {
+    background: #1877f2;
+}
+
+/* Use Another Profile */
+
+.secondary-link {
+    margin-top: 28px;
+
+    color: #262626;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.secondary-link:hover {
+    text-decoration: underline;
+}
+
+/* Create New Account */
+
+.btn-outline {
+    width: 100%;
+    height: 52px;
+
+    margin-top: auto;
+
+    border: 2px solid #0095f6;
+    border-radius: 12px;
+
+    background: #fff;
+    color: #0095f6;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn-outline:hover {
+    background: #eef7ff;
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 35px;
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.footer span {
+    color: #262626;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 24px 20px 32px;
+    }
+
+    .back {
+        top: 14px;
+        left: 10px;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 30px;
+    }
+
+    .logo {
+        margin-top: 26px;
+    }
+
+    .logo img {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 45px;
+    }
+
+    .profile-image {
+        width: 170px;
+        height: 170px;
+    }
+
+    .username {
+        font-size: 26px;
+        margin-bottom: 35px;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .secondary-link {
+        font-size: 16px;
+    }
+
+    .footer {
+        margin-top: 30px;
+    }
+
+    .footer img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer span {
+        font-size: 16px;
+    }
+}
+
+```
