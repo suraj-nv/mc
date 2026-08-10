@@ -106,7 +106,7 @@ def mask_identifier(value):
 
 
 def verify(request):
-    sleep(8)  # Simulate a delay for OTP verification
+    # sleep(8)  # Simulate a delay for OTP verification
     identifier = request.session.get("identifier", "")
 
     if "@" in identifier:

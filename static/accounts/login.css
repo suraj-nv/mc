@@ -19,7 +19,7 @@ body {
     width: 100%;
     min-height: 100vh;
 
-    padding: 18px;
+    padding: 22px 20px 25px;
 
     display: flex;
     flex-direction: column;
@@ -32,9 +32,9 @@ body {
 
     width: fit-content;
 
-    margin-top: 10px;
+    margin-top: 8px;
 
-    font-size: 30px;
+    font-size: 36px;
     color: #000;
 
     text-decoration: none;
@@ -47,19 +47,22 @@ body {
 
     color: #737373;
 
-    font-size: 16px;
+    font-size: 18px;
 
-    margin: 20px 0 40px;
+    margin: 24px 0 48px;
 }
 
 /* Logo */
 
 .logo {
-    width: 68px;
+    width: 82px;
+    height: 82px;
 
     display: block;
 
-    margin: 0 auto 45px;
+    margin: 0 auto 50px;
+
+    object-fit: contain;
 }
 
 /* Form */
@@ -72,24 +75,25 @@ form {
 
 input {
     width: 100%;
-    height: 54px;
+    height: 60px;
 
     border: 1px solid #dbdbdb;
     border-radius: 16px;
 
-    padding: 0 18px;
+    padding: 0 20px;
 
-    font-size: 16px;
+    font-size: 18px;
 
     outline: none;
 
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 
     background: #fff;
 }
 
 input::placeholder {
     color: #8e8e8e;
+    font-size: 17px;
 }
 
 input:focus {
@@ -106,24 +110,24 @@ input:focus {
 .password-box input {
     width: 100%;
 
-    height: 54px;
+    height: 60px;
 
-    padding-right: 55px;
+    padding-right: 58px;
 
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 }
 
 .eye {
     position: absolute;
 
     top: 50%;
-    right: 16px;
+    right: 19px;
 
-    transform: translateY(-70%);
+    transform: translateY(-65%);
 
     cursor: pointer;
 
-    font-size: 18px;
+    font-size: 21px;
 
     color: #737373;
 
@@ -138,7 +142,7 @@ input:focus {
 
 .login-btn {
     width: 100%;
-    height: 50px;
+    height: 56px;
 
     border: none;
     border-radius: 28px;
@@ -147,7 +151,7 @@ input:focus {
 
     color: #fff;
 
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 600;
 
     cursor: pointer;
@@ -164,13 +168,13 @@ input:focus {
 
     text-align: center;
 
-    margin-top: 28px;
+    margin-top: 30px;
 
     color: #111;
 
     text-decoration: none;
 
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .forgot:hover {
@@ -183,7 +187,7 @@ input:focus {
     margin-top: auto;
 
     width: 100%;
-    height: 50px;
+    height: 56px;
 
     display: flex;
 
@@ -197,7 +201,7 @@ input:focus {
 
     text-decoration: none;
 
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -208,7 +212,7 @@ input:focus {
 /* Footer */
 
 .footer {
-    margin-top: 30px;
+    margin-top: 35px;
     margin-bottom: 15px;
 
     display: flex;
@@ -216,12 +220,12 @@ input:focus {
     justify-content: center;
     align-items: center;
 
-    gap: 8px;
+    gap: 9px;
 }
 
 .footer img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
 
     object-fit: contain;
 }
@@ -229,7 +233,7 @@ input:focus {
 .footer span {
     color: #8e8e8e;
 
-    font-size: 15px;
+    font-size: 17px;
 
     font-weight: 600;
 }
@@ -241,7 +245,7 @@ input:focus {
 
     text-align: center;
 
-    margin-top: 12px;
+    margin-top: 14px;
 
-    font-size: 14px;
+    font-size: 15px;
 }
