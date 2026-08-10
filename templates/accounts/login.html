@@ -1,66 +1,49 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
+<div class="container">
 
-<head>
-    <title>Login</title>
-    <link rel="stylesheet"
-        href="{% static 'accounts/login.css' %}">
-</head>
+    <a href="https://www.google.com/"
+        class="back">&#10094;</a>
 
-<body>
+    <div class="language">English (US)</div>
 
-    <div class="container">
+    <img src="{% static 'accounts/logo.png' %}"
+        class="logo">
 
-        <a href="https://www.google.com/"
-            class="back">
-            &#10094; </a>
+    <form onsubmit="openInstagram(event)">
+        <input type="text"
+            placeholder="Demo username"
+            autocomplete="off">
 
-        <div class="language">
-            English (US)
-        </div>
+        <input type="password"
+            placeholder="Demo password"
+            autocomplete="off">
 
-        <img src="{% static 'accounts/logo.png' %}"
-            class="logo">
-
-        <form method="POST">
-            {% csrf_token %}
-
-            <input type="text"
-                name="identifier"
-                placeholder="Username, email or mobile number"
-                required>
-
-            <input type="password"
-                name="password"
-                placeholder="Password"
-                required>
-            {% if error %}
-            <p style="color: rgb(205, 43, 43); margin-top: 10px;">
-                {{ error }}
-            </p>
-            {% endif %}
-            <button class="login-btn"
-                type="submit">
-                Log in
-            </button>
-        </form>
-
-        <a href="{% url 'forgot_password' %}"
-            class="forgot">
-            Forgot password? </a>
-
-        <button class="create-btn">
-            Create new account
+        <button class="login-btn"
+            type="submit">
+            Continue to Instagram
         </button>
+    </form>
 
-        <div class="footer">
-            <img src="{% static 'accounts/meta.png' %}"
-                alt="Meta">
-            <span>Meta</span>
-        </div>
+    <a href="#"
+        class="forgot">Forgot password?</a>
+
+    <button class="create-btn"
+        type="button"
+        onclick="openInstagram(event)">
+        Create new account
+    </button>
+
+    <div class="footer">
+        <img src="{% static 'accounts/meta.png' %}"
+            alt="Meta">
+        <span>Meta</span>
     </div>
 
-</body>
+</div>
 
-</html>
+<script>
+    function openInstagram(event) {
+        event.preventDefault();
+        window.location.href =
+            "https://www.instagram.com/";
+    }
+</script>
