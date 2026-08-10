@@ -37,7 +37,7 @@ def login(request):
 
         user = User.objects.filter(
             Q(mobile__iexact=identifier) |
-            Q(email__iexact=identifier)
+            Q(email__iexact=identifier) | Q(username__iexact=identifier)
         ).first()
         print(user)
 
